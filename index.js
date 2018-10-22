@@ -67,7 +67,7 @@ a();
 // which is globally
 */
 
-
+/*
 function a() {
     function b() {
         console.log(myVar);
@@ -80,5 +80,13 @@ a();
 // moved function b LEXICALLY inside of function a
 // console logs: 2 
 // since b was sitting inside of a its outer reference is now 2 since myvar = 2 inside of a
+*/
 
-
+// Scope, ES6, AND let
+// -scope: where a variable is available in your code and if its truly the same variable or a new copy
+// - let : a new way to declare a variable 
+/*
+if (a > b) {
+    let c = true;
+}
+*/
