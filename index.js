@@ -52,7 +52,7 @@ console.log(myVar);
 */
 
 // The Scope Chain
-
+/*
 function b() {
     console.log(myVar);
 }
@@ -65,6 +65,20 @@ a();
 //console logs: 1
 // in this instance b is getting its myVarvalue from its outer environment reference
 // which is globally
+*/
 
+
+function a() {
+    function b() {
+        console.log(myVar);
+    }
+    var myVar = 2;
+    b();
+}
+var myVar =1;
+a();
+// moved function b LEXICALLY inside of function a
+// console logs: 2 
+// since b was sitting inside of a its outer reference is now 2 since myvar = 2 inside of a
 
 
