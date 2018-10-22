@@ -15,7 +15,7 @@
 
 
 // execution stack
-
+/*
 function b() {
     var d;
 }
@@ -26,14 +26,15 @@ function a() {
 a();
 var d;
 
-// even though a is defined below b once function a is envoked function b will then run.
-// we have global execution stack, then the a() stack, then b()stack once b is complete it will "pop" off the stack
-// returning us to complete a
+even though a is defined below b once function a is envoked function b will then run.
+we have global execution stack, then the a() stack, then b()stack once b is complete it will "pop" off the stack
+returning us to complete a
+*/
 
 
 // functions, context, and variable environment
 // variable environment (where they are and how they relate to each other in memory)
-function b() {
+/* function b() {
     var myVar;
     console.log(myVar);
 }
@@ -48,3 +49,22 @@ a();
 console.log(myVar);
 // what will myVar be at any given point?
 // 1, 2, undefined
+*/
+
+// The Scope Chain
+
+function b() {
+    console.log(myVar);
+}
+function a() {
+    // var myVar = 2;
+    b();
+}
+var myVar =1;
+a();
+//console logs: 1
+// in this instance b is getting its myVarvalue from its outer environment reference
+// which is globally
+
+
+
