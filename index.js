@@ -90,3 +90,27 @@ if (a > b) {
     let c = true;
 }
 */
+
+// asynchronous: more than one at a time
+// long running function
+function waitThreeSeconds() {
+    var ms = 3000 + new Date().getTime();
+    while (new Date() < ms){
+        console.log('finished function');
+    }
+}
+function clickHandler() {
+    console.log('click event!');
+}
+
+// listen for the click event
+document.addEventListener('click', clickHandler);
+
+waitThreeSeconds();
+console.log('finished execution');
+// page takes 3 seconds to run the function waitThreeSeconds
+// console logs: (when not clicking on screen )finished function, finished execution
+// console logs: (when clicking while funcion is running) finished function, finished execution, click event!
+// it puts the click event in the 'que' and runs the 'que' once the execution stack is complete
+// javascript "watches" the que periodiodically
+
