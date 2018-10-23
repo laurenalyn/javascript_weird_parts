@@ -91,13 +91,17 @@ if (a > b) {
 }
 */
 
+
+
+/* =========================================================
 // asynchronous: more than one at a time
 // long running function
 function waitThreeSeconds() {
     var ms = 3000 + new Date().getTime();
     while (new Date() < ms){}
-        console.log('finished function');
+    console.log('finished function');
 }
+        
 function clickHandler() {
     console.log('click event!');
 }
@@ -112,4 +116,27 @@ console.log('finished execution');
 // console logs: (when clicking while funcion is running) finished function, finished execution, click event!
 // it puts the click event in the 'que' and runs the 'que' once the execution stack is complete
 // javascript "watches" the que periodiodically
+========================================================= */
 
+
+/*=========================================================
+
+Dynamic Typing - you dont tell the engine what type of data a variable holds
+it figures it out while your code is running    - variables can hold diffrent
+types of vaues because its all figured out during execution
+ex: var isNew = true; // no error
+    isNew = 'yup'; // no error
+    isNew = 1; // no error
+
+    Static Typing - you have to tell the engine what type of data it holds
+ex:   bool isNew = 'hello' // an error - it has to hold a boolean value
+s
+=========================================================*/
+
+/*=========================================================
+
+
+
+
+
+=========================================================*/
