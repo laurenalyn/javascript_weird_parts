@@ -135,6 +135,39 @@ s
 
 /*=========================================================
 
+Primitive Type:
+a type of data that represents a single value
+    - that is, not an object
+1. undefined - represents lack of existence *never set a variable to this*
+2. null - represents lack of existence
+3. boolean - true or false
+4. number - floating point # ( there's alwasy some decimals) Unlike other 
+programming languages, theres only one 'number' type and it can make math weird
+5. string - sequence of characters (bother "" and '' can be used)
+6. symbol - used in ES6
+
+=========================================================*/
+
+
+
+/*=========================================================
+
+
+
+
+
+=========================================================*/
+
+/*=========================================================
+
+
+
+
+
+=========================================================*/
+
+/*=========================================================
+
 
 
 
