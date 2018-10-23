@@ -150,13 +150,22 @@ programming languages, theres only one 'number' type and it can make math weird
 
 
 
-/*=========================================================
+// =========================================================
+// Operators: a special function that is syntactically (written) differently
+// generally, operators take two parameters and return one result
 
 
+var a = 3 + 4; // addition operator
+console.log(a); // 7
+var b = 4 - 3; // subtraction operator
+console.log(b); // 1
+var c = 4 > 3; //  greater than operator -- returns a boolean value
+console.log(c); // true
+var d = 4 < 3; // less than operator
+console.log(d); // false
 
 
-
-=========================================================*/
+// =========================================================*/
 
 /*=========================================================
 
