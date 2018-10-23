@@ -150,7 +150,7 @@ programming languages, theres only one 'number' type and it can make math weird
 
 
 
-// =========================================================
+/* =========================================================
 // Operators: a special function that is syntactically (written) differently
 // generally, operators take two parameters and return one result
 
@@ -165,15 +165,30 @@ var d = 4 < 3; // less than operator
 console.log(d); // false
 
 
-// =========================================================*/
-
-/*=========================================================
-
-
-
-
-
 =========================================================*/
+
+// =========================================================
+
+// Operator Precedence and Associativity:
+// operator precedence: which operator function gets called first
+// -functions are called in order of precedence (HIGHER precedence wins)
+// operator associativity: what oreder operator functions get clled in: left-to-right or right-to-left
+// -when function have the SAME precenence
+
+var a = 3 + 4 * 5; //4*5 runs first then adds 3 = 23   multiplication has the HIGHER precedence 
+console.log(a); // 23
+// associativity
+var e = (3 + 4)* 5; // runs what is inside th () first due to higher precedence
+console.log(e); // 35
+var b = 2, c = 3, d = 4;
+b = c = d;
+console.log(b); // 4
+console.log(c); // 4
+console.log(d);// 4
+// we are using the = operator which is a right - to -left associativity
+
+
+// =========================================================*/
 
 /*=========================================================
 
