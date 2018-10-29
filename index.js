@@ -258,7 +258,7 @@ if (a || a === 0) {
 //if either are true the result is true
 =========================================================*/
 
-//=========================================================
+/*=========================================================
 //Default Values:
 function greet(name) {
     name = name || '<Your name here>'; //default value
@@ -267,4 +267,13 @@ function greet(name) {
 greet('Tony');   //Hello Tony
 greet();    //Hello undefined - the + operator coerced the undefined parameter to the string undefined
             // called again after adding the default value and we get Hello <Your name here>
+=========================================================*/
+
+//=========================================================
+//Framework Aside:
+console.log(libraryName);
+//we added 2 new js files (lib1 and lib2) and tied them into our html file.
+//we then added the above console.log to see which libraryName would show - since the lib2.js file was added
+//under lib1.js it overwrites the lib1 libraryName variable 
+//when we change the lib2.js file we now get "lib1" in the console becuaes the variable names are clashing
 //=========================================================*/
