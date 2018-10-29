@@ -167,7 +167,7 @@ console.log(d); // false
 
 =========================================================*/
 
-// =========================================================
+/* =========================================================
 
 // Operator Precedence and Associativity:
 // operator precedence: which operator function gets called first
@@ -186,14 +186,53 @@ console.log(b); // 4
 console.log(c); // 4
 console.log(d);// 4
 // we are using the = operator which is a right - to -left associativity
-
-
-// =========================================================*/
+=========================================================*/
 
 /*=========================================================
-
-
-
-
+//Coercion:
+//converting a vaue from one type to another - this happens quite often in JS b/c its dynmically typed
+var a = 1 + 2;
+console.log(a); // 3
+var b = 'hello' + 'world';
+console.log(b); // hello world
+var c = 1 + '2';
+console.log(c); // 12
+// the first value was coerced into a string value
 
 =========================================================*/
+
+//=========================================================
+//Comparison Operators:
+//console.log(1 < 2 < 3); //true
+//console.log(3 < 2 < 1); // true - due to precedence it runs from left to right. it evaluates 3 < 2 and gets "false" false turns into a 0. then it evaluates 0 < 1 giving a "true"
+
+//== equality
+//!= inequality
+//=== strict equality compares 2 things but doesnt try to coerce the values
+//!== strict inequality
+// 3 == 3 // true
+// "3" == "3" // true
+// "3" == 3 //true - due to coersion
+
+// 3 === 3 //true
+// "3" === "3" //true
+// "3" === 3 //false
+
+var a = 0;
+var b = false;
+if (a == b) {
+    console.log('They are equal');
+} else {
+    console.log('Nope, not equal');
+}
+// 'they are equal'
+
+var c = 0;
+var d= false;
+if (c === d) {
+    console.log('They are equal');
+} else {
+    console.log('Nope, not equal');
+}
+// 'nope, not equal'
+//=========================================================*/
