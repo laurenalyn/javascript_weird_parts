@@ -237,15 +237,34 @@ if (c === d) {
 // 'nope, not equal'
 =========================================================*/
 
-//=========================================================
+/*=========================================================
 //Existence and Booleans:
 var a;
 // goes out to internet & looks for a value
-a = 'true';
+//a = 'true'
+//a = 0;
+
 if (a || a === 0) {
     console.log('Something is there.');
 }
 //if a is undefined you dont see a console log
+//if a is set to "true" you get a console log
 //if a is a 0 you dont see a console log because 0 coerces to "false" so we added an || (or) to see if it is equal to 0;
 
+//with the || operator it will take see which side has precedence and the === has precedence
+//so js compares a === 0 which comes back "true" 
+//leaving us with a || true       a = 0 giving us "false"
+//so we are comparing (false || true)
+//if either are true the result is true
+=========================================================*/
+
+//=========================================================
+//Default Values:
+function greet(name) {
+    name = name || '<Your name here>'; //default value
+    console.log('Hello ' + name);
+}
+greet('Tony');   //Hello Tony
+greet();    //Hello undefined - the + operator coerced the undefined parameter to the string undefined
+            // called again after adding the default value and we get Hello <Your name here>
 //=========================================================*/
