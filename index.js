@@ -201,7 +201,7 @@ console.log(c); // 12
 
 =========================================================*/
 
-//=========================================================
+/*=========================================================
 //Comparison Operators:
 //console.log(1 < 2 < 3); //true
 //console.log(3 < 2 < 1); // true - due to precedence it runs from left to right. it evaluates 3 < 2 and gets "false" false turns into a 0. then it evaluates 0 < 1 giving a "true"
@@ -235,4 +235,17 @@ if (c === d) {
     console.log('Nope, not equal');
 }
 // 'nope, not equal'
+=========================================================*/
+
+//=========================================================
+//Existence and Booleans:
+var a;
+// goes out to internet & looks for a value
+a = 'true';
+if (a || a === 0) {
+    console.log('Something is there.');
+}
+//if a is undefined you dont see a console log
+//if a is a 0 you dont see a console log because 0 coerces to "false" so we added an || (or) to see if it is equal to 0;
+
 //=========================================================*/
