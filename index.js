@@ -281,22 +281,42 @@ greet();    //Hello undefined - the + operator coerced the undefined parameter t
 //=========================================================
 // Objects & the Dot
 
-var person = new Object();
+// var person = new Object();
 
-person['firstname'] = "Tony"; //sets firstname key to the value "Tony"
-person['lastname'] = "Alicea";
+// person['firstname'] = "Tony"; //sets firstname key to the value "Tony"
+// person['lastname'] = "Alicea";
 
-var firstnameProperty = 'firstname';
+// var firstnameProperty = 'firstname';
 
-console.log(person);
-console.log(person.firstname);
-// console.log(person[firstnameProperty]); 
+// console.log(person);
+// console.log(person.firstname);
+// // console.log(person[firstnameProperty]); 
 
-person.address = new Object();
-person.address.street = "111 Main St";
-person.address.city = 'New York';
-person.address.state = 'NY';
-console.log(person.address.city);
-console.log(person.address.state);
+// person.address = new Object();
+// person.address.street = "111 Main St";
+// person.address.city = 'New York';
+// person.address.state = 'NY';
+// console.log(person.address.city);
+// console.log(person.address.state);
+//=========================================================*/
 
+//=========================================================
+// Objects & Object Literals
+// object literal syntax var person = {... ...};
+var Lauren = {
+    firstname: 'Lauren',
+    lastname : 'Wilkerson',
+    address: {
+        street: '111 Main St',
+        city: 'New York City',
+        state: 'NY'
+    }
+};  
+
+function greet(person) {
+    console.log('Hi ' + person.firstname);
+}
+greet(Lauren);
+
+greet({firstname: 'Mary', lastname: 'Doe'}); //creats an object on the fly
 //=========================================================*/
