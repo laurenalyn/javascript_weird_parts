@@ -303,20 +303,40 @@ greet();    //Hello undefined - the + operator coerced the undefined parameter t
 //=========================================================
 // Objects & Object Literals
 // object literal syntax var person = {... ...};
-var Lauren = {
-    firstname: 'Lauren',
-    lastname : 'Wilkerson',
-    address: {
-        street: '111 Main St',
-        city: 'New York City',
-        state: 'NY'
-    }
-};  
+// var Lauren = {
+//     firstname: 'Lauren',
+//     lastname : 'Wilkerson',
+//     address: {
+//         street: '111 Main St',
+//         city: 'New York City',
+//         state: 'NY'
+//     }
+// };  
 
-function greet(person) {
-    console.log('Hi ' + person.firstname);
-}
-greet(Lauren);
+// function greet(person) {
+//     console.log('Hi ' + person.firstname);
+// }
+// greet(Lauren);
 
-greet({firstname: 'Mary', lastname: 'Doe'}); //creats an object on the fly
+// greet({firstname: 'Mary', lastname: 'Doe'}); //creats an object on the fly
+//=========================================================*/
+
+//=========================================================
+//Framework Aside:
+//Faking namespaces
+//namespace: a container for variables and functions - 
+//typically to keep variables and function with the same name seperate
+
+var greet = 'Hello!';
+var greet = 'Hola!'
+console.log(greet); //'Hola!'
+
+var english = {};
+var spanish = {};
+
+english.greet = 'Hello!';
+spanish.greet = 'Hola!';
+
+console.log(english);
+
 //=========================================================*/
