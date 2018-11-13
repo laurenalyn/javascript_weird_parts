@@ -271,9 +271,32 @@ greet();    //Hello undefined - the + operator coerced the undefined parameter t
 
 //=========================================================
 //Framework Aside:
-console.log(libraryName);
+// console.log(libraryName);
 //we added 2 new js files (lib1 and lib2) and tied them into our html file.
 //we then added the above console.log to see which libraryName would show - since the lib2.js file was added
 //under lib1.js it overwrites the lib1 libraryName variable 
-//when we change the lib2.js file we now get "lib1" in the console becuaes the variable names are clashing
+//when we change the lib2.js file we now get "lib1" in the console because the variable names are clashing
+//=========================================================*/
+
+//=========================================================
+// Objects & the Dot
+
+var person = new Object();
+
+person['firstname'] = "Tony"; //sets firstname key to the value "Tony"
+person['lastname'] = "Alicea";
+
+var firstnameProperty = 'firstname';
+
+console.log(person);
+console.log(person.firstname);
+// console.log(person[firstnameProperty]); 
+
+person.address = new Object();
+person.address.street = "111 Main St";
+person.address.city = 'New York';
+person.address.state = 'NY';
+console.log(person.address.city);
+console.log(person.address.state);
+
 //=========================================================*/
